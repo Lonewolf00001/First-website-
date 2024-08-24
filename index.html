@@ -5,145 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Ayush Net - DIARY</title>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: Arial, sans-serif;
-            }
-
-            body {
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh;
-            }
-
-            header {
-                background-color: #3b5998;
-                color: white;
-                padding: 20px;
-                text-align: center;
-            }
-
-            main {
-                flex: 1;
-                padding: 20px;
-                background-color: linear-gradient(
-                    to bottom,
-                    yellow,
-                    green,
-                    red
-                );
-            }
-
-            .log-container {
-                max-width: 800px;
-                margin: 0 auto;
-            }
-
-            .log-entry {
-                background-color: #f8f8f8;
-                border: 1px solid #ddd;
-                padding: 15px;
-                margin-bottom: 20px;
-                border-radius: 5px;
-            }
-
-            .log-entry h2 {
-                margin-bottom: 10px;
-                color: #333;
-            }
-
-            .log-entry a {
-                text-decoration: none;
-                color: #333;
-            }
-
-            .log-entry a:hover {
-                text-decoration: underline;
-            }
-
-            .log-entry p {
-                margin-bottom: 10px;
-                line-height: 1.6;
-            }
-
-            .timestamp {
-                font-size: 0.9em;
-                color: #999;
-            }
-
-            footer {
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-                background-color: #3b5998;
-                color: white;
-                text-align: center;
-                padding: 10px;
-            }
-
-            .read-more-text {
-                display: none;
-            }
-
-            .read-more-text-show {
-                display: inline;
-            }
-
-            .read-more-btn {
-                color: blue;
-                cursor: pointer;
-                float: right;
-                text-decoration: underline;
-            }
-
-            .log-entry p::after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-
-            .src {
-                padding: 10px;
-                font-size: 17px;
-                border: 1px solid black;
-                width: 100%;
-                margin-bottom: 20px;
-            }
-
-            /* Add Button and Form */
-            .add-btn {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                background-color: #3b5998;
-                color: white;
-                border: none;
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
-                cursor: pointer;
-            }
-
-            .add-form {
-                display: none;
-                position: fixed;
-                bottom: 90px;
-                right: 20px;
-                background-color: white;
-                padding: 20px;
-                border: 1px solid #ddd;
-                border-radius: 5px;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            }
-
-            .strikethrough {
-                text-decoration: line-through;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
@@ -162,7 +24,7 @@
         <main>
             <section class="log-container">
                 <!-- Always add new blog on top -->
-            <a href="try/try.html">n</a>
+            
             
             
                 <article class="log-entry">
@@ -321,57 +183,6 @@ i thought that i'll study after cake cutting but it's 1:28 am and not a single w
             <p>Ayush Net © 2024. All rights reserved.</p>
         </footer>
 
-        <script>
-            function toggleReadMore(element) {
-                const currentText =
-                    element.parentNode.querySelector(".read-more-text");
-                currentText.classList.toggle("read-more-text-show");
-
-                element.textContent = element.textContent.includes("Read More")
-                    ? "Read Less"
-                    : "Read More";
-            }
-
-            // Initial Setup for Read More
-            const parentContainers = document.querySelectorAll(".log-entry");
-
-            parentContainers.forEach((container) => {
-                container.addEventListener("click", (event) => {
-                    const current = event.target;
-                    const isReadMoreBtn =
-                        current.classList.contains("read-more-btn");
-
-                    if (!isReadMoreBtn) return;
-
-                    toggleReadMore(current);
-                });
-            });
-
-            // Search Function
-            function search() {
-                let filter = document
-                    .getElementById("find")
-                    .value.toUpperCase();
-                let items = document.querySelectorAll(".log-entry"); // All articles
-                let headers = document.querySelectorAll(".log-entry h2"); // All h2 headings
-                let dates = document.querySelectorAll(".log-entry .timestamp"); // All timestamp elements
-
-                for (let i = 0; i < headers.length; i++) {
-                    let headerText =
-                        headers[i].innerText || headers[i].textContent;
-                    let dateText = dates[i].innerText || dates[i].textContent;
-
-                    // Check if either the heading or the date contains the search term
-                    if (
-                        headerText.toUpperCase().indexOf(filter) > -1 ||
-                        dateText.toUpperCase().indexOf(filter) > -1
-                    ) {
-                        items[i].style.display = "";
-                    } else {
-                        items[i].style.display = "none";
-                    }
-                }
-            }
-        </script>
+        <script src="script.js">script.js</script>
     </body>
 </html>
