@@ -9,24 +9,21 @@
                 display: flex;
                 flex-direction: column;
                 min-height: 100vh;
+                 background:url('/resources /background.png');
+                background-size: cover;
             }
 
             header {
-                background-color: #3b5998;
+                background-color:#2699D9A6;
                 color: white;
-                padding: 20px;
+                padding: 10px;
                 text-align: center;
             }
 
             main {
                 flex: 1;
                 padding: 20px;
-                background-color: linear-gradient(
-                    to bottom,
-                    yellow,
-                    green,
-                    red
-                );
+               
             }
 
             .log-container {
@@ -35,16 +32,19 @@
             }
 
             .log-entry {
-                background-color: #f8f8f8;
-                border: 1px solid #ddd;
+                background-color: transparent;
+                backdrop-filter: blur(20px);
+                border: 1px solid #2699D9;
                 padding: 15px;
                 margin-bottom: 20px;
                 border-radius: 5px;
+                box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.2),
+                2px 2px 10px #26C1D9A1;
             }
 
             .log-entry h2 {
                 margin-bottom: 10px;
-                color: #333;
+                color:#ECECEC;
             }
 
             .log-entry a {
@@ -74,6 +74,7 @@
                 color: white;
                 text-align: center;
                 padding: 10px;
+                display: none;
             }
 
             .read-more-text {
@@ -82,10 +83,11 @@
 
             .read-more-text-show {
                 display: inline;
+                color: #FEFEFE;
             }
 
             .read-more-btn {
-                color: blue;
+                color: #2699D9;
                 cursor: pointer;
                 float: right;
                 text-decoration: underline;
@@ -100,39 +102,13 @@
             .src {
                 padding: 10px;
                 font-size: 17px;
-                border: 1px solid black;
+                border: 1px solid #26C1D9A6;
                 width: 100%;
                 margin-bottom: 20px;
+                background: transparent;
+                backdrop-filter: blur(10px)
             }
 
-            /* Add Button and Form */
-            .add-btn {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                background-color: #3b5998;
-                color: white;
-                border: none;
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
-                cursor: pointer;
-            }
+            
 
-            .add-form {
-                display: none;
-                position: fixed;
-                bottom: 90px;
-                right: 20px;
-                background-color: white;
-                padding: 20px;
-                border: 1px solid #ddd;
-                border-radius: 5px;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            }
-
-            .strikethrough {
-                text-decoration: line-through;
-            }
-        
+            
