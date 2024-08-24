@@ -9,7 +9,7 @@
                 display: flex;
                 flex-direction: column;
                 min-height: 100vh;
-                 background:url('/resources /background.png');
+                 background:url('resources/background.png');
                 background-size: cover;
             }
 
