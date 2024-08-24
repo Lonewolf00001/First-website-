@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Ayush Net - DIARY</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            header {
+                background-color: #3b5998;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+
+            main {
+                flex: 1;
+                padding: 20px;
+                background-color: linear-gradient(
+                    to bottom,
+                    yellow,
+                    green,
+                    red
+                );
+            }
+
+            .log-container {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .log-entry {
+                background-color: #f8f8f8;
+                border: 1px solid #ddd;
+                padding: 15px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+            }
+
+            .log-entry h2 {
+                margin-bottom: 10px;
+                color: #333;
+            }
+
+            .log-entry a {
+                text-decoration: none;
+                color: #333;
+            }
+
+            .log-entry a:hover {
+                text-decoration: underline;
+            }
+
+            .log-entry p {
+                margin-bottom: 10px;
+                line-height: 1.6;
+            }
+
+            .timestamp {
+                font-size: 0.9em;
+                color: #999;
+            }
+
+            footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background-color: #3b5998;
+                color: white;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .read-more-text {
+                display: none;
+            }
+
+            .read-more-text-show {
+                display: inline;
+            }
+
+            .read-more-btn {
+                color: blue;
+                cursor: pointer;
+                float: right;
+                text-decoration: underline;
+            }
+
+            .log-entry p::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .src {
+                padding: 10px;
+                font-size: 17px;
+                border: 1px solid black;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            /* Add Button and Form */
+            .add-btn {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #3b5998;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .add-form {
+                display: none;
+                position: fixed;
+                bottom: 90px;
+                right: 20px;
+                background-color: white;
+                padding: 20px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .strikethrough {
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Ayush Net</h1>
+        </header>
+
+        <input
+            type="text"
+            id="find"
+            onkeyup="search()"
+            placeholder="Search for Blogs"
+            class="src"
+        />
+
+        <main>
+            <section class="log-container">
+                <!-- Always add new blog on top -->
+                <article class="log-entry">
+                    <h2>can a day could be perfect</h2>
+                    <p>
+                        <span class="read-more-text">Whole day got wasted... after schooli went to bed.. thought ok will wake up and study and kudos there was a cake cutting... well i am still ashamed of me. How the fk i can forget her birthday like how.. i worked my whole night and thought maybe today i can get myself in a better position but.. in the very first period i again got scolding well scolding is not the problem if it were just that.. rather he was humbling me.. ahh ok he is my teacher, but why daily . Like can't there could be a single day when i can be pass 5 periods in peace.. and then sitting in the class i remembered her birthday like.. yes i didn't forget just due to all recent mind fking things i got off my head but yet she is my mother and i should be ashamed of this. <br> 
+i thought that i'll study after cake cutting but it's 1:28 am and not a single word on the page... ya since last blog i did completed some of my task so not that bad day but .. these daily scoldings and the way all teacher putting me down.. i am god damm suffering.. ok i got an strategy to study its like gorilla warfare.. whenever i get time i'll on my books.. and also to invest time wisely.. now i am at the position where i need to be a wise man.. well i believe that i was just overthinking but ya it was worth it.. sometimes you need to humble you yourself to keep your legs on ground or i say in puddle.  Well there are some philosophies goinn round my head.. i will tell that latter.. and ya tomorrow in school i will redesign this shit.. so a new look is coming soon..
+<br> BUNONES NOCHES </span>
+                        <span class="read-more-btn">Read More</span>
+                    </p>
+                    <span class="timestamp">Posted on: 23 august 2024</span>
+                </article>
+
+                <article class="log-entry">
+                    <h2>Am i late</h2>
+                    <p>
+                        <span class="read-more-text">
+                            You know what I AYUSH THAKUR is fking idiot and also
+                            dumb.. i guess both means same but ya i am that crap
+                            who had one task and he wasn't able to achieve
+                            that.. i didn't completed Application of Derivatives
+                            ( leave it i'll manage the test by cheating )
+                            neither completed the maths topics also 6 months
+                            from now i have my fking JEE mains exams.. and this
+                            crap haven't completed a single chapter.. i knew you
+                            were idiot and nvr achive your god damm goals from
+                            NDA to a fking love.. but you slim ass made yourself
+                            a moron in your eyes who just shit whenever he speak
+                            just brag big talk and work zero and is a shame on
+                            your bloodline .. a guy who gets distracted even by
+                            a random bitch but yaa will surely speak fking
+                            philosophies in front of world.. now its you verse
+                            you but i guess it always was that.. you were nevera
+                            competition to anyone.. if you think someone is
+                            laughingat you at your back.. then let me be
+                            honestyou deserve that... and now what you abused
+                            yourself so much.. now you gonna change so let me be
+                            honest NO you are going nowhere with such failure
+                            attitude.. what you gonna do tell your kid cry to
+                            world then listen to me no one gives a dammmm to you
+                            , yaa they will solace you but its always you who
+                            gonna suffer.. and note my words YOU ARE A FKING
+                            FAILURE . Now listen to me i don'twant to be your 2
+                            am motivation guy NO i am not like you who just
+                            think, remember even if you fail i will be by your
+                            back uplifting you, but in the eyes of world you
+                            will be a topic of mock a guy whom the world thought
+                            will do nothing in life and you proved them right..
+                            well are you thinking about durga puja .. you know
+                            when is puja after exams and after how many days
+                            days. More than a week, so keep yourself focus and
+                            achive the big for Which you were born.. Oh wait!
+                            you didn't know why you were born.. ofcourse not to
+                            conquer the world.. its not worth it.. but to
+                            conquer yourself.. fking philosophies ig i have to
+                            stop listeningto you.. otherwise i will become a
+                            moron like you.. well its 1 am at night and as the
+                            quote says.. " weight of discipline are in ounces
+                            but of regret are ik tons." so keep yourself focused
+                            and yaa now you are up to you.. good luck... <br />
+                            well i have spoken too much to myself now its time
+                            to work hope till i write another blog i have
+                            achieved something in my eyes.. not the big fish but
+                            atleast a tuna.. as getting a whale only comes after
+                            practising catching tuna so.. hope so.. this time i
+                            make my inner me proud.. <br />
+                            BUNONES NOCHES
+                        </span>
+                        <span class="read-more-btn">Read More</span>
+                    </p>
+                    <span class="timestamp">Posted on :- 22 August 2024 </span>
+                </article>
+
+                <article class="log-entry">
+                    <h2>One of the Worst Rakhi</h2>
+                    <p>
+                        <span class="read-more-text">
+                            Ok, so here we are again.. but this time added a
+                            search feature so now I can add more and more, and
+                            if I speak about designing, I will keep that for
+                            another day.. exams are near so I have to manage my
+                            schedule.. <br />
+                            Well, let's come back to the Title ... the day was
+                            boring as hell neither Didi was here, nor did I have
+                            fun.. wasted my time a lot.. yes I can't
+                            <s>blame myself this time</s> NO I SHOULD ALWAYS
+                            TAKE MY RESPONSIBILITIES. Well, tomorrow I have a
+                            test, and honestly, I won't be studying for it as it
+                            is not worth it.. a test where one could easily
+                            score by cheating.. I can study, but if I manage
+                            time, I can do more productive tasks... well, I need
+                            to make myself better; I am getting good but not
+                            enough.. well, it's time to say good night... <br />
+                            BUENOS NOCHES
+                        </span>
+                        <span class="read-more-btn">Read More</span>
+                    </p>
+                    <span class="timestamp">Posted on: 20 August 2024 </span>
+                </article>
+
+                <article class="log-entry">
+                    <h2>Ahh Another Day</h2>
+                    <p>
+                        <span class="read-more-text">
+                            You know what.. It's not fun to do web development..
+                            just because of designing, like 40% of your time
+                            just goes in adjusting the position of the box.
+                            Well, again it's Rakshabandhan, and just this year
+                            will also be boring.. as sis is not here.. well,
+                            also this is the last day of the 5-day vacation, so
+                            this night I have to complete calculus by hook or by
+                            crook... <br />
+                            If I speak about development, then I added a read
+                            more button today and also made a template, so each
+                            day I have to just paste the template and start
+                            writing.. and tomorrow I'll try to style it, and
+                            this website will be completed. <br />
+                            BUENOS NOCHES
+                        </span>
+                        <span class="read-more-btn">Read More</span>
+                    </p>
+                    <span class="timestamp">Posted on: 19 August 2024 </span>
+                </article>
+
+                <article class="log-entry">
+                    <h2>First Blog</h2>
+                    <p>
+                        <span class="read-more-text">
+                            If the world asks me what is the reason for your
+                            failure.. I will reply with "me, myself." Well, I
+                            should study now as it's 3 am, but dumb of me
+                            writing a website that will hardly have 2 visitors
+                            monthly.. maybe 30 as I have to see that each day,
+                            but yeah.. I am dumb.. there are exams on Tuesday,
+                            and.. I am wasting time writing junk.. well, yet
+                            internet this is my first website, so let me
+                            introduce myself. <br /><br />
+                            Well, myself Ayush Thakur in 12th standard with PCM.
+                            Also a philomath and poet. And suffering from
+                            koinophobia. <br /><br />
+                            OK, so nerdy copy-pasta intro.. I'll update that
+                            later.. well, I am feeling tired after writing such
+                            junk code.. so good night world. Tomorrow I will try
+                            to update this junk UI, and I am a noob, so yes,
+                            it's all hard-coded, so enjoy hurting your eyes
+                            reading this.
+                        </span>
+                        <span class="read-more-btn">Read More</span>
+                    </p>
+                    <span class="timestamp">Posted on: 18 August 2024</span>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>Ayush Net © 2024. All rights reserved.</p>
+        </footer>
+
+        <script>
+            function toggleReadMore(element) {
+                const currentText =
+                    element.parentNode.querySelector(".read-more-text");
+                currentText.classList.toggle("read-more-text-show");
+
+                element.textContent = element.textContent.includes("Read More")
+                    ? "Read Less"
+                    : "Read More";
+            }
+
+            // Initial Setup for Read More
+            const parentContainers = document.querySelectorAll(".log-entry");
+
+            parentContainers.forEach((container) => {
+                container.addEventListener("click", (event) => {
+                    const current = event.target;
+                    const isReadMoreBtn =
+                        current.classList.contains("read-more-btn");
+
+                    if (!isReadMoreBtn) return;
+
+                    toggleReadMore(current);
+                });
+            });
+
+            // Search Function
+            function search() {
+                let filter = document
+                    .getElementById("find")
+                    .value.toUpperCase();
+                let items = document.querySelectorAll(".log-entry"); // All articles
+                let headers = document.querySelectorAll(".log-entry h2"); // All h2 headings
+                let dates = document.querySelectorAll(".log-entry .timestamp"); // All timestamp elements
+
+                for (let i = 0; i < headers.length; i++) {
+                    let headerText =
+                        headers[i].innerText || headers[i].textContent;
+                    let dateText = dates[i].innerText || dates[i].textContent;
+
+                    // Check if either the heading or the date contains the search term
+                    if (
+                        headerText.toUpperCase().indexOf(filter) > -1 ||
+                        dateText.toUpperCase().indexOf(filter) > -1
+                    ) {
+                        items[i].style.display = "";
+                    } else {
+                        items[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
